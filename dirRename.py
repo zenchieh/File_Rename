@@ -34,6 +34,7 @@ for root, dirs, files in os.walk(directory_path):
 
                 print(f"Renamed: {old_filepath} to {new_filepath}")
 
+# 將每個子資料夾檔案往外移一層
 for root, dirs, files in os.walk(directory_path, topdown=False):
     for dir_name in dirs:
         dir_path = os.path.join(root, dir_name)
@@ -45,13 +46,14 @@ for root, dirs, files in os.walk(directory_path, topdown=False):
 
         os.rmdir(dir_path)
 
-
+# 把json檔案和py檔刪除
 for root, dirs, files in os.walk(directory_path):
     for file_name in files:
         if file_name.endswith(('.json', '.py')):
             file_path = os.path.join(root, file_name)
             os.remove(file_path)
 
+# 壓縮輸出zip檔案
 folder_name = os.path.basename(directory_path)
 zip_filename = f"{folder_name}.zip"
 with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
@@ -60,6 +62,5 @@ with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
             file_path = os.path.join(root, file_name)
             arcname = os.path.relpath(file_path, directory_path)
             zipf.write(file_path, arcname)
-
 
 shutil.move(zip_filename, os.path.join(directory_path, zip_filename))
