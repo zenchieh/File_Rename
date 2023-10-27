@@ -18,9 +18,12 @@
 ![image](https://github.com/zenchieh/File_Rename/assets/64319084/fc6bbe93-57e8-4bb3-8c34-09090cdc6fe9)
     
 
-### [Step2] - (TODO : 寫成.bat一鍵完成)
+### [Step2] - (TODO : 寫成.bat一鍵完成 ＆ 改為相對路徑)
 
 - 開powershell or VScode or 其他可以跑python的環境
+- 在 createStudentDir.py 中更改以下參數
+    - student_dir_path 改為資料夾產生後擺放的路徑
+    - json_file_path 改為你json檔案的路徑
 - 下指令
     - $ **python createStudentDir.py**
     - 會產生所有學生的資料夾
@@ -37,6 +40,8 @@
 ### [Step4]
 
 - 下指令
+- 在 dirRename.py 中更改以下參數
+    - directory_path 改為你放所有學生資料夾的路徑
     - $ **python dirRename.py**
     
     ![image](https://github.com/zenchieh/File_Rename/assets/64319084/8f62ab9f-5066-4a3f-a387-fa069bc4a251)
