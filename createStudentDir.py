@@ -21,7 +21,7 @@ student_dir_path = "C:\\Users\\zen\\Desktop\\test"
 json_file_path = "C:\\Users\\zen\\Desktop\\test\\courseid_49244_participants.json"
 
 # 讀Json file
-with open('C:\\Users\\zen\\Desktop\\test\\courseid_49244_participants.json', 'r', encoding='utf-8') as json_file:
+with open(json_file_path, 'r', encoding='utf-8') as json_file:
     data = json.load(json_file)
 
 # 遍歷每個學生資料
