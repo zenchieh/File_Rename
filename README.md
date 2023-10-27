@@ -22,11 +22,12 @@
 
 - 開powershell or VScode or 其他可以跑python的環境
 - 在 createStudentDir.py 中更改以下參數
-    - student_dir_path 改為資料夾產生後擺放的路徑
-    - json_file_path 改為你json檔案的路徑
+    - student_dir_path 改為資料夾產生後擺放的絕對路徑
+    - json_file_path 改為你json檔案的絕對路徑
 - 下指令
     - $ **python createStudentDir.py**
-    - 會產生所有學生的資料夾
+    - 會parse json file，產生所有學生的資料夾，包含老師跟助教
+    - 記得把老師跟學生的資料夾手動刪除
         
         ![image](https://github.com/zenchieh/File_Rename/assets/64319084/5a2b5b07-1545-4ee7-acc3-118297fec356)
         ![image](https://github.com/zenchieh/File_Rename/assets/64319084/01684ed7-72cd-45a6-a7ba-108e1244eec1)
@@ -37,15 +38,18 @@
 
 - 拍照，放到相對應的資料夾內
 
-### [Step4]
-
-- 下指令
+### [Step4] - (TODO : 壓縮檔案輸出zip資料夾)
+************************************************************  
+- **注意!! 在執行之前建議先備份資料夾，避免出現error/Bug時檔案遺失**
+************************************************************ 
 - 在 dirRename.py 中更改以下參數
-    - directory_path 改為你放所有學生資料夾的路徑
+    - directory_path 改為你放所有學生資料夾的絕對路徑
+- 下指令
     - $ **python dirRename.py**
     
     ![image](https://github.com/zenchieh/File_Rename/assets/64319084/8f62ab9f-5066-4a3f-a387-fa069bc4a251)
     
     - 會把資料夾內的照片改成 學號_姓名_1、學號_姓名_2 …
-    - 並把它移出來 & 刪掉資料夾，並包成一個zip檔案放在該資料夾
-    ![image](https://github.com/zenchieh/File_Rename/assets/64319084/1a3b19e5-f37a-4eff-99d1-5fcfdd516ff7)
+    - 並把它移出來 & 刪掉資料夾
+
+        ![image](https://github.com/zenchieh/File_Rename/assets/64319084/1a3b19e5-f37a-4eff-99d1-5fcfdd516ff7)
