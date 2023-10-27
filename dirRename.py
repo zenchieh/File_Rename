@@ -34,7 +34,7 @@ for root, dirs, files in os.walk(directory_path):
 
                 print(f"Renamed: {old_filepath} to {new_filepath}")
 
-# 將每個子資料夾檔案往外移一層
+# 將每個子資料夾檔案往外移一層 & 把資料夾刪除
 for root, dirs, files in os.walk(directory_path, topdown=False):
     for dir_name in dirs:
         dir_path = os.path.join(root, dir_name)
@@ -54,6 +54,9 @@ for root, dirs, files in os.walk(directory_path):
             os.remove(file_path)
 
 # 壓縮輸出zip檔案
+'''
+# TODO : the code below do not compression size, need to fix
+
 folder_name = os.path.basename(directory_path)
 zip_filename = f"{folder_name}.zip"
 with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
@@ -64,3 +67,4 @@ with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
             zipf.write(file_path, arcname)
 
 shutil.move(zip_filename, os.path.join(directory_path, zip_filename))
+'''
