@@ -8,7 +8,7 @@
 
 - 去E3載學生資料的json檔案
     - 成員 > 選擇所有____個使用者
-    
+    - 記得過濾為只有學生的資料
     ![image](https://github.com/zenchieh/File_Rename/assets/64319084/b71fc513-84e7-4a5e-9c63-9be97ab60654)
 
     
@@ -26,8 +26,7 @@
     - json_file_path 改為你json檔案的絕對路徑
 - 下指令
     - $ **python createStudentDir.py**
-    - 會parse json file，產生所有學生的資料夾，包含老師跟助教
-    - 記得把老師跟學生的資料夾手動刪除
+    - 會parse json file，產生所有學生的資料夾
         
         ![image](https://github.com/zenchieh/File_Rename/assets/64319084/5a2b5b07-1545-4ee7-acc3-118297fec356)
         ![image](https://github.com/zenchieh/File_Rename/assets/64319084/01684ed7-72cd-45a6-a7ba-108e1244eec1)
